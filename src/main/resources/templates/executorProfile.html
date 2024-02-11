@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Executor Profile</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1 th:text="Executor + ${executor.id}">Executor:</h1>
+    <p>ID: <span th:text="${executor.id}"></span></p>
+    <p>Name: <span th:text="${executor.name}"></span></p>
+    <p>Tasks: <span th:text="${executor.tasks}"></span></p>
+
+
+    <h1>-------------------------------------------------</h1>
+
+    <div>
+        <form th:method="GET" th:action="@{/index/executors/add/{id}(id=${executor.id})}" th:object="${executor}" >
+            <input type="submit" value="AddTasks!"/></form>
+
+    </div>
+
+</body>
+</html>

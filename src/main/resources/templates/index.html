@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="indexh1">
+        <h1>Service</h1>
+    </div>
+
+    <div class="divBut">
+        <div>
+            <form class="indexBut" th:method="GET" th:action="@{/admin/tasks}" th:object="${task}">
+                <input class="subindex" type="submit" value="Tasks"/></form>
+        </div>
+
+        <div>
+            <form class="indexBut" th:method="GET" th:action="@{/staff/executors}" th:object="${executors}">
+                <input class="subindex" type="submit" value="Executors"/></form>
+        </div>
+    </div>
+
+
+</body>
+</html>

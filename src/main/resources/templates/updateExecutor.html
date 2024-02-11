@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Executor</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="addtask">
+
+    <h1>Update Executor</h1>
+    <form th:method="POST" th:action="@{/staff/executors/updateExecutor/{id}(id=${executor.id})}" th:object="${executor}" >
+
+        <div class="descriptionform">
+            <label for="name">Name</label>
+            <input type="text" th:field="*{name}" id="name"></input>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Update!"/> <input type="reset" value="Clear!"/>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

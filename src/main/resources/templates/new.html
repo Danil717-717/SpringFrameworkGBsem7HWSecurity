@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reg</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div class="addtask">
+
+    <h1>Add task</h1>
+    <form th:method="POST" th:action="@{/admin/tasks}" th:object="${task}" >
+        <div class="descriptionform">
+            <label for="description">Description</label>
+            <input type="text" th:field="*{description}" id="description"></input>
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+        </div>
+
+        <div class="statusform">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option th:each="status : ${T(ru.home.testsecuritt.model.Task.Status).values()}"
+                        th:value="${status}" th:text="${status}"></option>
+            </select>
+
+        </div>
+
+        <div>
+            <input type="submit" value="Create!"/> <input type="reset" value="Clear!"/>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

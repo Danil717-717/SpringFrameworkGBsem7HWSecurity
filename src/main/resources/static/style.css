@@ -1,0 +1,105 @@
+a{
+    text-decoration: none;
+}
+
+
+h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+p{
+    text-align: center;
+}
+
+.indexh1{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.divBut{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.indexBut{
+
+}
+
+.subindex{
+    width: 130px;
+    height: 50px;
+}
+
+
+.inputtask{
+    height: 45px;
+    width: 180px;
+    background-color: cornflowerblue;
+}
+
+.linkId{
+    color: red;
+}
+
+.linkUpdate{
+    color: cornflowerblue;
+}
+
+.linkDelete{
+    color: red;
+}
+
+form{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.body_h2{
+    text-align: center;
+}
+
+.inputuser{
+    width: 150px;
+    height: 50px;
+    background: blanchedalmond;
+    border-radius: 15px;
+}
+
+.tablediv{
+    justify-content: center;
+    display: flex;
+}
+
+.tabletask{
+
+}
+
+.formreg{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.addtask{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.descriptionform{
+    padding-bottom: 10px;
+}
+
+.statusform{
+    padding-bottom: 10px;
+}
+

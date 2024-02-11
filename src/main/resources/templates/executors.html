@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Executors</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="body_title">
+        <h1> Service Executors</h1>
+    </div>
+
+    <div>
+        <form class="addbut" th:method="GET" th:action="@{/staff/executors/newExecutor}" th:object="${executor}">
+            <input class="inputtask" type="submit" value="Add executors"/></form>
+    </div>
+
+    <br>
+    <h2 class="body_h2">Executors: </h2>
+
+    <div class="tablediv">
+        <table border="1" class="tabletask">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Tasks</th>
+                <th>Actions</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="executor:${executors}">
+                <td><a class="linkId" th:href="@{/staff/executors/{id}(id=${executor.id})}" th:text="${executor.id}"></a></td>
+                <td th:text="${executor.name}"></td>
+                <td th:text="${executor.tasks}"></td>
+                <td><a class="linkUpdate" th:href="@{/staff/executors/update/{id}(id=${executor.id})}" >Update</a></td>
+                <td><a class="linkDelete" th:href="@{/staff/executors/delete/{id}(id=${executor.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
